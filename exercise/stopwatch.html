@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+input { width:30px }      
+    </style>
+    <title>小時鐘</title>
+  </head>
+  <body>
+<script>
+
+var time =10
+var state = "stop"
+function printTime() {
+  if (state=="start"){
+    if (time==0) {
+      time =10
+      stop()
+    }
+      timelabel.innerText = time--
+  setTimeout(printTime, 1000);
+  }
+}
+
+function start(){
+  if (time==0) time=100
+  state = "start"
+  
+  printTime()
+  document.getElementById("start").disabled = true;
+  document.getElementById("stop").disabled = false;
+  
+}
+
+function stop(){
+ state = "stop";
+ document.getElementById("start").disabled = false;
+ document.getElementById("stop").disabled = true;
+}
+</script>    
+    <label id="timelabel">10</label>
+    <button id="start" onclick="start()">Start</button>
+    <button id="stop" onclick="stop()" disabled>Stop</button>
+  </body>
+</html>
