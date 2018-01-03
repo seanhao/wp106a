@@ -2,4 +2,4 @@
 
 作品     |  專案網址 (github)
 ---------|-------------------------------
-作品名稱  | https://github.com/path
+Canvas  | https://github.com/seanhao/wp106a/tree/master/project
